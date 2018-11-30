@@ -1,9 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.marchuck.fiszki.lessons.LessonsActivity">
 
-</android.support.constraint.ConstraintLayout>
+
+    <com.marchuck.fiszki.view.ShimmerRecyclerView
+        android:layout_width="match_parent"
+        android:id="@+id/recyclerView"
+        app:shimmer_demo_angle="20"
+        app:shimmer_demo_layout="@layout/layout_shimmer_view"
+        app:shimmer_demo_shimmer_color="@color/shimmer_color"
+        app:shimmer_demo_view_holder_item_background="@drawable/bg_card"
+        android:layout_height="wrap_content"/>
+
+
+
+
+</RelativeLayout>

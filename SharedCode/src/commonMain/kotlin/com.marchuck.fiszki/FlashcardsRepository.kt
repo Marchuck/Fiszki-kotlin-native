@@ -1,7 +1,6 @@
 package org.kotlin.mpp.mobile.com.marchuck.fiszki
 
 import org.kotlin.mpp.mobile.com.marchuck.fiszki.model.Flashcard
-import org.kotlin.mpp.mobile.com.marchuck.fiszki.model.KnowledgeProgress
 
 interface FlashcardsRepository {
 
@@ -11,7 +10,7 @@ interface FlashcardsRepository {
 
     fun resetProgress(lesson: String)
 
-    fun updateProgress(lesson: String, knowledgeProgress: KnowledgeProgress)
+    fun updateProgress(lesson: String, flashcards: List<Flashcard>)
 
     fun getFlashCardLessons(): List<String>
 }
