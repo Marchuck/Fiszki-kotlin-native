@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Gradle: Kotlin/Native:MediaPlayer:ios_x64:0.9.3">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.konan/kotlin-native-macos-0.9.3/klib/platform/ios_x64/MediaPlayer" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
