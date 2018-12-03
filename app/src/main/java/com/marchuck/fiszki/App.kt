@@ -2,25 +2,34 @@ package com.marchuck.fiszki
 
 import android.app.Application
 import android.content.Context
-import android.preference.PreferenceManager
-import com.google.gson.Gson
+import android.widget.Toast
 import com.marchuck.fiszki.data.AndroidSpecificFlashCardsRepository
+import com.marchuck.fiszki.data.db.FlashcardLessonsDatabase
 import org.kotlin.mpp.mobile.com.marchuck.fiszki.FlashcardsRepository
 import org.kotlin.mpp.mobile.com.marchuck.fiszki.di.ServiceLocator
 
 class App : Application() {
 
+
     companion object {
         var _context: Context? = null
         val repository: FlashcardsRepository by lazy {
             AndroidSpecificFlashCardsRepository(
-                    PreferenceManager.getDefaultSharedPreferences(_context),
-                    Gson()
+                    roomDatabase.getLessonsDao(),
+                    roomDatabase.getFlashcardsDao()
             )
+        }
+
+        val roomDatabase: FlashcardLessonsDatabase  by lazy {
+            FlashcardLessonsDatabase.getInstance(_context!!)
         }
 
         fun getFlashCardsRepository(): FlashcardsRepository {
             return repository
+        }
+
+        fun showToast(message: String) {
+            Toast.makeText(_context, message, Toast.LENGTH_LONG).show()
         }
     }
 

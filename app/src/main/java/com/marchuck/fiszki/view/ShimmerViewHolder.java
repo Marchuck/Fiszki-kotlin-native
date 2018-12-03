@@ -19,13 +19,13 @@ package com.marchuck.fiszki.view;
 
 import android.graphics.drawable.Drawable;
 import android.os.Build;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
 
 import com.marchuck.fiszki.R;
 
+import androidx.recyclerview.widget.RecyclerView;
 import io.supercharge.shimmerlayout.ShimmerLayout;
 
 

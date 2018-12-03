@@ -1,19 +1,19 @@
 package com.marchuck.fiszki.new_lesson
 
 import android.app.Activity
+import android.app.AlertDialog
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
-import android.support.v7.app.AlertDialog
-import android.support.v7.app.AppCompatActivity
-import android.support.v7.widget.LinearLayoutManager
 import android.view.View
 import android.view.inputmethod.InputMethodManager
+import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.marchuck.fiszki.App
 import com.marchuck.fiszki.R
 import kotlinx.android.synthetic.main.activity_create_lesson.*
 import org.kotlin.mpp.mobile.com.marchuck.fiszki.model.Flashcard
-import org.kotlin.mpp.mobile.com.marchuck.fiszki.model.TranslationId
+import org.kotlin.mpp.mobile.com.marchuck.fiszki.model.Translation
 import org.kotlin.mpp.mobile.com.marchuck.fiszki.presenter.createLesson.CreateLessonPresenter
 import org.kotlin.mpp.mobile.com.marchuck.fiszki.presenter.createLesson.CreateLessonView
 import org.kotlin.mpp.mobile.com.marchuck.fiszki.useCase.CreateLessonUseCase
@@ -48,7 +48,7 @@ class CreateLessonActivity : AppCompatActivity(), CreateLessonView {
         adapter.notifyItemInserted(adapter.items.indexOf(flashcard))
     }
 
-    override fun showNewFlashcardForm(translationId: TranslationId) {
+    override fun showNewFlashcardForm(translationId: Translation) {
         hideKeyboard()
         val fm = supportFragmentManager
 
@@ -64,7 +64,7 @@ class CreateLessonActivity : AppCompatActivity(), CreateLessonView {
         selected_translation.text = text
     }
 
-    override fun showCannotSwitchSelectedTranslationBecauseFlashcardsAddedAlready(selectedTranslationId: TranslationId) {
+    override fun showCannotSwitchSelectedTranslationBecauseFlashcardsAddedAlready(selectedTranslationId: Translation) {
         showAbsorbingDialog("Sorry, but you already added some translations for ${selectedTranslationId.name} .")
     }
 

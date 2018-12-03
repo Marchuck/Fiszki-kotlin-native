@@ -1,7 +1,7 @@
 package com.marchuck.fiszki.base
 
-import android.support.v4.app.Fragment
-import android.support.v4.app.FragmentActivity
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentActivity
 
 abstract class BaseFragment<T : FragmentActivity> : Fragment() {
 

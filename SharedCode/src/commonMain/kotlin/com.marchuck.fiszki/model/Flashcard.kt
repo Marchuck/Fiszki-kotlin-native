@@ -1,7 +1,6 @@
 package org.kotlin.mpp.mobile.com.marchuck.fiszki.model
 
-data class Flashcard(val lesson_id: String,
-                     val image: String,
+data class Flashcard(val lesson_id: Long,
                      val heads: String,
                      val tails: String,
                      val flashCardState: FlashCardState) {
@@ -10,7 +9,6 @@ data class Flashcard(val lesson_id: String,
 
 fun Flashcard.resetProgress(): Flashcard {
     return Flashcard(lesson_id,
-            image,
             heads,
             tails,
             FlashCardState.NOT_SEEN)

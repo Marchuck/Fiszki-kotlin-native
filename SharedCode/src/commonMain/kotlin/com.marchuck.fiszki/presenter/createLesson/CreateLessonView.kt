@@ -1,7 +1,7 @@
 package org.kotlin.mpp.mobile.com.marchuck.fiszki.presenter.createLesson
 
 import org.kotlin.mpp.mobile.com.marchuck.fiszki.model.Flashcard
-import org.kotlin.mpp.mobile.com.marchuck.fiszki.model.TranslationId
+import org.kotlin.mpp.mobile.com.marchuck.fiszki.model.Translation
 
 interface CreateLessonView {
 
@@ -15,11 +15,11 @@ interface CreateLessonView {
 
     fun clearErrors()
 
-    fun showNewFlashcardForm(translationId: TranslationId)
+    fun showNewFlashcardForm(translationId: Translation)
 
     fun showNewTranslationId(text: String)
 
-    fun showCannotSwitchSelectedTranslationBecauseFlashcardsAddedAlready(selectedTranslationId: TranslationId)
+    fun showCannotSwitchSelectedTranslationBecauseFlashcardsAddedAlready(selectedTranslationId: Translation)
 
     fun onFlashcardInserted(flashcard: Flashcard)
 

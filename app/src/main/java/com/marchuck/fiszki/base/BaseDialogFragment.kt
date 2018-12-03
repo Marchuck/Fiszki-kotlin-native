@@ -1,8 +1,8 @@
 package com.marchuck.fiszki.base
 
-import android.support.v4.app.DialogFragment
-import android.support.v4.app.Fragment
-import android.support.v4.app.FragmentActivity
+import androidx.fragment.app.DialogFragment
+import androidx.fragment.app.FragmentActivity
+
 
 abstract class BaseDialogFragment<T : FragmentActivity> : DialogFragment() {
 

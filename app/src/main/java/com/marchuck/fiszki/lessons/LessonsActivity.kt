@@ -1,8 +1,8 @@
 package com.marchuck.fiszki.lessons
 
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
-import android.support.v7.widget.LinearLayoutManager
+import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.marchuck.fiszki.App
 import com.marchuck.fiszki.R
 import com.marchuck.fiszki.lessons.learning.LearningActivity
@@ -30,6 +30,8 @@ class LessonsActivity : AppCompatActivity(), LessonsView {
         adapter.listener = { lesson ->
             presenter.onLessonClick(lesson)
         }
+
+        presenter.requestLessons()
     }
 
     override fun render(state: LessonsViewState) {
@@ -44,11 +46,10 @@ class LessonsActivity : AppCompatActivity(), LessonsView {
                 adapter.items = state.lessons
                 adapter.notifyDataSetChanged()
                 recyclerView.hideShimmerAdapter()
-
             }
 
             is LessonsViewState.Error -> {
-
+                App.showToast(state.message)
             }
 
             is LessonsViewState.EnterLesson -> {

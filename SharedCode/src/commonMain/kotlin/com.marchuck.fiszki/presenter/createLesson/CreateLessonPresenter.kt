@@ -1,27 +1,27 @@
 package org.kotlin.mpp.mobile.com.marchuck.fiszki.presenter.createLesson
 
-import org.kotlin.mpp.mobile.com.marchuck.fiszki.model.FlashCardState
-import org.kotlin.mpp.mobile.com.marchuck.fiszki.model.Flashcard
-import org.kotlin.mpp.mobile.com.marchuck.fiszki.model.TranslationId
+import org.kotlin.mpp.mobile.com.marchuck.fiszki.model.*
 import org.kotlin.mpp.mobile.com.marchuck.fiszki.presenter.base.BasePresenter
 import org.kotlin.mpp.mobile.com.marchuck.fiszki.useCase.CreateLessonUseCase
+import kotlin.random.Random
 
 class CreateLessonPresenter(val createLessonUseCase: CreateLessonUseCase) : BasePresenter<CreateLessonView>() {
 
+    var pendingLessonId = Random.nextLong(Long.MAX_VALUE)
     var select_translation_clicks = 0
-    var selectedTranslationId: TranslationId? = null
+    var selectedTranslation: Translation? = null
     var flashcards: ArrayList<Flashcard> = arrayListOf()
 
     fun onAddNewFlashcard() {
-        if (selectedTranslationId == null) {
+        if (selectedTranslation == null) {
             view?.showTranslationIdEmpty()
             return
         }
-        view?.showNewFlashcardForm(selectedTranslationId!!)
+        view?.showNewFlashcardForm(selectedTranslation!!)
     }
 
     fun putNewFlashcard(heads: String, tails: String) {
-        val flashcard = Flashcard("", "", heads, tails, FlashCardState.NOT_SEEN)
+        val flashcard = Flashcard(pendingLessonId, heads, tails, FlashCardState.NOT_SEEN)
         flashcards.add(flashcard)
         view?.onFlashcardInserted(flashcard)
     }
@@ -32,9 +32,9 @@ class CreateLessonPresenter(val createLessonUseCase: CreateLessonUseCase) : Base
 
     fun onTranslationIdButtonClicked() {
         if (flashcards.isNotEmpty()) {
-            if (selectedTranslationId == null) throw IllegalStateException("you shouldn't face this state ever!!!")
+            if (selectedTranslation == null) throw IllegalStateException("you shouldn't face this state ever!!!")
             else {
-                view?.showCannotSwitchSelectedTranslationBecauseFlashcardsAddedAlready(selectedTranslationId!!)
+                view?.showCannotSwitchSelectedTranslationBecauseFlashcardsAddedAlready(selectedTranslation!!)
             }
             return
         }
@@ -43,11 +43,11 @@ class CreateLessonPresenter(val createLessonUseCase: CreateLessonUseCase) : Base
     }
 
     private fun getNewTranslationId(): String {
-        val values = TranslationId.values()
+        val values = Translation.values()
         select_translation_clicks = (select_translation_clicks + 1) % values.size
-        selectedTranslationId = values[select_translation_clicks]
+        selectedTranslation = values[select_translation_clicks]
 
-        return selectedTranslationId!!.name.replace("_", " -> ")
+        return selectedTranslation!!.name.replace("_", " -> ")
 
     }
 
@@ -58,7 +58,8 @@ class CreateLessonPresenter(val createLessonUseCase: CreateLessonUseCase) : Base
             view?.showLessonNameEmpty()
             return false
         }
-        if (selectedTranslationId == null) {
+
+        if (selectedTranslation == null) {
             view?.showTranslationIdEmpty()
             return false
         }
@@ -72,7 +73,12 @@ class CreateLessonPresenter(val createLessonUseCase: CreateLessonUseCase) : Base
             view?.showFlashCardsTooMuch(max)
             return false
         }
-        createLessonUseCase.createLesson(lessonName, selectedTranslationId!!, flashcards)
+        pendingLessonId
+        val lesson = Lesson(pendingLessonId,
+                Language.recognize(selectedTranslation!!.from),
+                Language.recognize(selectedTranslation!!.to),
+                lessonName)
+        createLessonUseCase.createLesson(lesson, flashcards)
         return true
     }
 }

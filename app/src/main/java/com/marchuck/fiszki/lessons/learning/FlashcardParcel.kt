@@ -8,11 +8,10 @@ import org.kotlin.mpp.mobile.com.marchuck.fiszki.model.Flashcard
 data class FlashcardParcel(val state: Int,
                            val heads: String,
                            val tails: String,
-                           val imageUrl: String,
-                           val lesson_id: String) : Parcelable {
+                           val lesson_id: Long) : Parcelable {
 
 
 }
 
 fun Flashcard.toParcel() = FlashcardParcel(flashCardState.code,
-        heads,tails,image,lesson_id)
+        heads, tails, lesson_id)

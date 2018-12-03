@@ -4,8 +4,8 @@
     <facet type="kotlin-language" name="Kotlin">
       <configuration version="3" platform="JVM 1.6" useProjectSettings="false" isTestModule="true" externalProjectId=":SharedCode">
         <sourceSets>
-          <sourceSet>SharedCode_androidMain</sourceSet>
           <sourceSet>SharedCode_commonTest</sourceSet>
+          <sourceSet>SharedCode_androidMain</sourceSet>
           <sourceSet>SharedCode_commonMain</sourceSet>
         </sourceSets>
         <newMppModelJpsModuleKind>COMPILATION_AND_SOURCE_SET_HOLDER</newMppModelJpsModuleKind>
@@ -45,42 +45,42 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="SharedCode_commonMain" />
-    <orderEntry type="library" name="Gradle: org.hamcrest:hamcrest-core:1.3" level="project" />
-    <orderEntry type="library" name="Gradle: junit:junit:4.12" level="project" />
-    <orderEntry type="library" name="Gradle: io.ktor:ktor-network:1.0.0-beta-3" level="project" />
-    <orderEntry type="library" name="Gradle: io.ktor:ktor-utils:1.0.0-beta-3" level="project" />
-    <orderEntry type="library" name="Gradle: io.ktor:ktor-http:1.0.0-beta-3" level="project" />
-    <orderEntry type="library" name="Gradle: org.jetbrains.kotlinx:atomicfu-common:0.11.12" level="project" />
-    <orderEntry type="library" name="Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-io:0.1.0-beta-1" level="project" />
-    <orderEntry type="library" name="Gradle: org.jetbrains.kotlinx:kotlinx-io:0.1.0-beta-1" level="project" />
-    <orderEntry type="library" name="Gradle: io.ktor:ktor-utils-jvm:1.0.0-beta-3" level="project" />
-    <orderEntry type="library" name="Gradle: io.ktor:ktor-http-jvm:1.0.0-beta-3" level="project" />
-    <orderEntry type="library" name="Gradle: io.ktor:ktor-http-cio:1.0.0-beta-3" level="project" />
-    <orderEntry type="library" name="Gradle: com.typesafe:config:1.3.1" level="project" />
-    <orderEntry type="library" name="Gradle: org.slf4j:slf4j-api:1.7.25" level="project" />
-    <orderEntry type="library" name="Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-io-jvm:0.1.0-beta-1" level="project" />
-    <orderEntry type="library" name="Gradle: org.jetbrains.kotlinx:kotlinx-io-jvm:0.1.0-beta-1" level="project" />
-    <orderEntry type="library" name="Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-jdk8:1.0.0" level="project" />
-    <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.3.0" level="project" />
-    <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.0" level="project" />
-    <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-reflect:1.3.0" level="project" />
-    <orderEntry type="library" name="Gradle: io.ktor:ktor-client-json:1.0.0-beta-3" level="project" />
-    <orderEntry type="library" name="Gradle: io.ktor:ktor-client-core:1.0.0-beta-3" level="project" />
-    <orderEntry type="library" name="Gradle: io.ktor:ktor-client-json-jvm:1.0.0-beta-3" level="project" />
-    <orderEntry type="library" name="Gradle: io.ktor:ktor-client-core-jvm:1.0.0-beta-3" level="project" />
-    <orderEntry type="module" module-name="SharedCode_androidMain" />
-    <orderEntry type="module" module-name="SharedCode_commonTest" />
-    <orderEntry type="library" name="Gradle: org.jetbrains:annotations:13.0" level="project" />
-    <orderEntry type="library" name="Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core:1.0.0" level="project" />
-    <orderEntry type="library" name="Gradle: org.jetbrains.kotlinx:kotlinx-serialization-runtime:0.9.0" level="project" />
-    <orderEntry type="library" name="Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core-common:1.0.0" level="project" />
-    <orderEntry type="library" name="Gradle: org.jetbrains.kotlinx:kotlinx-serialization-runtime-common:0.9.0" level="project" />
-    <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.3.10" level="project" />
-    <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-common:1.3.10" level="project" />
-    <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-test-common:1.3.10" level="project" />
-    <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-test-annotations-common:1.3.10" level="project" />
-    <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-test:1.3.10" level="project" />
     <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-test-junit:1.3.10" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-test:1.3.10" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-test-annotations-common:1.3.10" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-test-common:1.3.10" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-common:1.3.10" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.3.10" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.kotlinx:kotlinx-serialization-runtime-common:0.9.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core-common:1.0.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.kotlinx:kotlinx-serialization-runtime:0.9.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core:1.0.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains:annotations:13.0" level="project" />
+    <orderEntry type="module" module-name="SharedCode_commonTest" />
+    <orderEntry type="module" module-name="SharedCode_androidMain" />
+    <orderEntry type="library" name="Gradle: io.ktor:ktor-client-core-jvm:1.0.0-beta-3" level="project" />
+    <orderEntry type="library" name="Gradle: io.ktor:ktor-client-json-jvm:1.0.0-beta-3" level="project" />
+    <orderEntry type="library" name="Gradle: io.ktor:ktor-client-core:1.0.0-beta-3" level="project" />
+    <orderEntry type="library" name="Gradle: io.ktor:ktor-client-json:1.0.0-beta-3" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-reflect:1.3.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.3.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-jdk8:1.0.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.kotlinx:kotlinx-io-jvm:0.1.0-beta-1" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-io-jvm:0.1.0-beta-1" level="project" />
+    <orderEntry type="library" name="Gradle: org.slf4j:slf4j-api:1.7.25" level="project" />
+    <orderEntry type="library" name="Gradle: com.typesafe:config:1.3.1" level="project" />
+    <orderEntry type="library" name="Gradle: io.ktor:ktor-http-cio:1.0.0-beta-3" level="project" />
+    <orderEntry type="library" name="Gradle: io.ktor:ktor-http-jvm:1.0.0-beta-3" level="project" />
+    <orderEntry type="library" name="Gradle: io.ktor:ktor-utils-jvm:1.0.0-beta-3" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.kotlinx:kotlinx-io:0.1.0-beta-1" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-io:0.1.0-beta-1" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.kotlinx:atomicfu-common:0.11.12" level="project" />
+    <orderEntry type="library" name="Gradle: io.ktor:ktor-http:1.0.0-beta-3" level="project" />
+    <orderEntry type="library" name="Gradle: io.ktor:ktor-utils:1.0.0-beta-3" level="project" />
+    <orderEntry type="library" name="Gradle: io.ktor:ktor-network:1.0.0-beta-3" level="project" />
+    <orderEntry type="library" name="Gradle: junit:junit:4.12" level="project" />
+    <orderEntry type="library" name="Gradle: org.hamcrest:hamcrest-core:1.3" level="project" />
   </component>
   <component name="TestModuleProperties" production-module="SharedCode_androidMain" />
 </module>

@@ -1,12 +1,12 @@
 package com.marchuck.fiszki.new_lesson
 
 import android.os.Bundle
-import android.support.design.widget.TextInputEditText
-import android.support.design.widget.TextInputLayout
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import com.google.android.material.textfield.TextInputEditText
+import com.google.android.material.textfield.TextInputLayout
 import com.marchuck.fiszki.R
 import com.marchuck.fiszki.base.BaseDialogFragment
 
