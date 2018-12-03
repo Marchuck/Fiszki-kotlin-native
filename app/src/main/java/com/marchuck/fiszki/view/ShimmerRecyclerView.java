@@ -26,7 +26,8 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.AttributeSet;
 
-import com.jetbrains.jonnyzzz.myapplication.R;
+import com.marchuck.fiszki.R;
+
 
 public class ShimmerRecyclerView extends RecyclerView {
 

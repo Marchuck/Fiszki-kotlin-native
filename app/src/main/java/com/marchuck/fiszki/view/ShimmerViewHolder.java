@@ -23,7 +23,8 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
-import com.jetbrains.jonnyzzz.myapplication.R;
+
+import com.marchuck.fiszki.R;
 
 import io.supercharge.shimmerlayout.ShimmerLayout;
 

@@ -1,4 +1,4 @@
-package org.kotlin.mpp.mobile.com.marchuck.fiszki.presenter
+package org.kotlin.mpp.mobile.com.marchuck.fiszki.presenter.lessons
 
 sealed class LessonsViewState {
 

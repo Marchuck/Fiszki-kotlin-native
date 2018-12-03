@@ -1,4 +1,4 @@
-package org.kotlin.mpp.mobile.com.marchuck.fiszki.presenter
+package org.kotlin.mpp.mobile.com.marchuck.fiszki.presenter.lessons
 
 import org.kotlin.mpp.mobile.com.marchuck.fiszki.presenter.base.BasePresenter
 import org.kotlin.mpp.mobile.com.marchuck.fiszki.useCase.LessonsUseCase

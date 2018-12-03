@@ -6,6 +6,7 @@ import com.google.gson.Gson
 import com.google.gson.JsonSyntaxException
 import org.kotlin.mpp.mobile.com.marchuck.fiszki.FlashcardsRepository
 import org.kotlin.mpp.mobile.com.marchuck.fiszki.model.Flashcard
+import org.kotlin.mpp.mobile.com.marchuck.fiszki.model.TranslationId
 import org.kotlin.mpp.mobile.com.marchuck.fiszki.model.resetProgress
 
 
@@ -15,20 +16,25 @@ class StringArrayList : ArrayList<String>()
 class AndroidSpecificFlashCardsRepository(val preferences: SharedPreferences,
                                           val gson: Gson) : FlashcardsRepository {
 
+    fun lessonKeyOf(lesson: String, translationId: TranslationId): String {
+        return LESSON_KEY + lesson + "_" + translationId.name
+    }
+
+    override fun createLesson(lesson: String,
+                              translationId: TranslationId,
+                              flashcards: List<Flashcard>) {
+        preferences.edit {
+            it.putString(lessonKeyOf(lesson, translationId), gson.toJson(FlashcardList(flashcards)))
+        }
+    }
+
     companion object {
         val LESSON_KEY = "LESSON_KEY"
         val LESSONS = "LESSONS"
     }
 
-    override fun createLesson(lesson: String, flashcards: List<Flashcard>) {
-        preferences.edit {
-
-            it.putString(LESSON_KEY + lesson, gson.toJson(FlashcardList(flashcards)))
-        }
-    }
-
-    override fun getLesson(lesson: String): List<Flashcard> {
-        val json = preferences.getString(LESSON_KEY + lesson, "")
+    override fun getLesson(lesson: String, translationId: TranslationId): List<Flashcard> {
+        val json = preferences.getString(lessonKeyOf(lesson, translationId), "")
         if (json?.isNotEmpty() == true) {
             try {
                 return gson.fromJson(json, FlashcardList::class.java)
@@ -38,20 +44,28 @@ class AndroidSpecificFlashCardsRepository(val preferences: SharedPreferences,
         return emptyList()
     }
 
-    override fun resetProgress(lesson: String) {
-        val flashCards = getLesson(lesson)
+    override fun resetProgress(lesson: String, translationId: TranslationId) {
+        val flashCards = getLesson(lesson, translationId)
         val newOne = arrayListOf<Flashcard>()
         for (j in flashCards) {
             newOne.add(j.resetProgress())
         }
-        createLesson(lesson, newOne)
+        createLesson(lesson, translationId, newOne)
     }
 
-    override fun updateProgress(lesson: String, flashcards: List<Flashcard>) {
-        createLesson(lesson, flashcards)
+    override fun updateProgress(lesson: String, translationId: TranslationId, flashcards: List<Flashcard>) {
+        createLesson(lesson, translationId, flashcards)
     }
 
     override fun getFlashCardLessons(): List<String> {
+
+        for (key in preferences.all){
+            if (key.key.startsWith(LESSON_KEY)){
+
+            }
+        }
+
+
         val json = preferences.getString(LESSONS, "")
         if (json?.isNotEmpty() == true) {
             try {

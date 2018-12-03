@@ -2,9 +2,10 @@ package com.marchuck.fiszki.presenter
 
 
 import org.kotlin.mpp.mobile.com.marchuck.fiszki.FlashcardsRepository
-import org.kotlin.mpp.mobile.com.marchuck.fiszki.presenter.LessonsPresenter
-import org.kotlin.mpp.mobile.com.marchuck.fiszki.presenter.LessonsView
-import org.kotlin.mpp.mobile.com.marchuck.fiszki.presenter.LessonsViewState
+
+import org.kotlin.mpp.mobile.com.marchuck.fiszki.presenter.lessons.LessonsPresenter
+import org.kotlin.mpp.mobile.com.marchuck.fiszki.presenter.lessons.LessonsView
+import org.kotlin.mpp.mobile.com.marchuck.fiszki.presenter.lessons.LessonsViewState
 import org.kotlin.mpp.mobile.com.marchuck.fiszki.useCase.LessonsUseCase
 import kotlin.test.BeforeTest
 import kotlin.test.Test

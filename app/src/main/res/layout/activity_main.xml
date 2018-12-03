@@ -8,6 +8,7 @@
     tools:context="com.marchuck.fiszki.MainActivity">
 
     <TextView
+        android:id="@+id/lessons"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
@@ -19,6 +20,7 @@
         android:textStyle="bold|italic" />
 
     <TextView
+        android:id="@+id/add_new_lesson"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
@@ -30,6 +32,7 @@
         android:textStyle="bold|italic" />
 
     <TextView
+        android:id="@+id/settings"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
