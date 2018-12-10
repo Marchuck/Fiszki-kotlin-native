@@ -6,6 +6,7 @@
     tools:context="com.marchuck.fiszki.lessons.learning.LearningActivity">
 
     <FrameLayout
+        android:id="@+id/content"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@+id/i_know_layout" />
@@ -19,18 +20,21 @@
         android:weightSum="3">
 
         <Button
+            android:id="@+id/button_known"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/i_know" />
 
         <Button
+            android:id="@+id/button_wrong"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/i_do_not_know" />
 
         <Button
+            android:id="@+id/button_skip"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"

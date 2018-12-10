@@ -14,8 +14,14 @@
 		47CC68C2215C0386001B3A20 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47CC68C0215C0386001B3A20 /* Main.storyboard */; };
 		47CC68C4215C0387001B3A20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47CC68C3215C0387001B3A20 /* Assets.xcassets */; };
 		47CC68C7215C0387001B3A20 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47CC68C5215C0387001B3A20 /* LaunchScreen.storyboard */; };
+		A756070321BE76E20010CE05 /* ExampleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A756070221BE76E20010CE05 /* ExampleTableViewController.swift */; };
+		A756070521BE79090010CE05 /* FlashcardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A756070421BE79090010CE05 /* FlashcardTableViewCell.swift */; };
+		A756070721BE90AE0010CE05 /* LessonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A756070621BE90AE0010CE05 /* LessonTableViewCell.swift */; };
+		A756070921BE92DC0010CE05 /* Dialogs.swift in Sources */ = {isa = PBXBuildFile; fileRef = A756070821BE92DC0010CE05 /* Dialogs.swift */; };
+		A756070C21BE96D80010CE05 /* LearningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A756070B21BE96D80010CE05 /* LearningViewController.swift */; };
 		A7DF2B3921B01EE0007B2281 /* LessonsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DF2B3821B01EE0007B2281 /* LessonsTableViewController.swift */; };
 		A7DF2B3C21B01F6C007B2281 /* IOSFlashcardsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DF2B3B21B01F6C007B2281 /* IOSFlashcardsRepository.swift */; };
+		A7E8882521BAE23900ED701F /* CreateLessonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E8882421BAE23900ED701F /* CreateLessonViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -41,8 +47,14 @@
 		47CC68C3215C0387001B3A20 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		47CC68C6215C0387001B3A20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		47CC68C8215C0387001B3A20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A756070221BE76E20010CE05 /* ExampleTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleTableViewController.swift; sourceTree = "<group>"; };
+		A756070421BE79090010CE05 /* FlashcardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardTableViewCell.swift; sourceTree = "<group>"; };
+		A756070621BE90AE0010CE05 /* LessonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonTableViewCell.swift; sourceTree = "<group>"; };
+		A756070821BE92DC0010CE05 /* Dialogs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dialogs.swift; sourceTree = "<group>"; };
+		A756070B21BE96D80010CE05 /* LearningViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningViewController.swift; sourceTree = "<group>"; };
 		A7DF2B3821B01EE0007B2281 /* LessonsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonsTableViewController.swift; sourceTree = "<group>"; };
 		A7DF2B3B21B01F6C007B2281 /* IOSFlashcardsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOSFlashcardsRepository.swift; sourceTree = "<group>"; };
+		A7E8882421BAE23900ED701F /* CreateLessonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateLessonViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,10 +103,20 @@
 			path = KotlinIOS;
 			sourceTree = "<group>";
 		};
+		A756070A21BE96BC0010CE05 /* learning */ = {
+			isa = PBXGroup;
+			children = (
+				A756070B21BE96D80010CE05 /* LearningViewController.swift */,
+			);
+			path = learning;
+			sourceTree = "<group>";
+		};
 		A7DF2B3521B01EB4007B2281 /* lessons */ = {
 			isa = PBXGroup;
 			children = (
+				A756070A21BE96BC0010CE05 /* learning */,
 				A7DF2B3821B01EE0007B2281 /* LessonsTableViewController.swift */,
+				A756070621BE90AE0010CE05 /* LessonTableViewCell.swift */,
 			);
 			path = lessons;
 			sourceTree = "<group>";
@@ -102,6 +124,9 @@
 		A7DF2B3621B01EBF007B2281 /* new_lesson */ = {
 			isa = PBXGroup;
 			children = (
+				A7E8882421BAE23900ED701F /* CreateLessonViewController.swift */,
+				A756070221BE76E20010CE05 /* ExampleTableViewController.swift */,
+				A756070421BE79090010CE05 /* FlashcardTableViewCell.swift */,
 			);
 			path = new_lesson;
 			sourceTree = "<group>";
@@ -117,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				A7DF2B3B21B01F6C007B2281 /* IOSFlashcardsRepository.swift */,
+				A756070821BE92DC0010CE05 /* Dialogs.swift */,
 			);
 			path = dependencies;
 			sourceTree = "<group>";
@@ -215,9 +241,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A756070321BE76E20010CE05 /* ExampleTableViewController.swift in Sources */,
 				A7DF2B3921B01EE0007B2281 /* LessonsTableViewController.swift in Sources */,
+				A756070C21BE96D80010CE05 /* LearningViewController.swift in Sources */,
+				A756070921BE92DC0010CE05 /* Dialogs.swift in Sources */,
 				47CC68BF215C0386001B3A20 /* ViewController.swift in Sources */,
+				A756070721BE90AE0010CE05 /* LessonTableViewCell.swift in Sources */,
 				A7DF2B3C21B01F6C007B2281 /* IOSFlashcardsRepository.swift in Sources */,
+				A7E8882521BAE23900ED701F /* CreateLessonViewController.swift in Sources */,
+				A756070521BE79090010CE05 /* FlashcardTableViewCell.swift in Sources */,
 				47CC68BD215C0386001B3A20 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

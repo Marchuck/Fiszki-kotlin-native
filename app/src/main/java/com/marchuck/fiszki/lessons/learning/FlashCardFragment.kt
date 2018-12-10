@@ -18,6 +18,8 @@ import com.marchuck.fiszki.base.BaseFragment
  */
 class FlashCardFragment : BaseFragment<LearningActivity>() {
 
+    private var revealState: Boolean = false
+
     private var flashcard: FlashcardParcel? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -34,6 +36,12 @@ class FlashCardFragment : BaseFragment<LearningActivity>() {
 
         return view
     }
+
+    fun reveal() {
+        revealState = true
+    }
+
+    fun isInRevealedState() = revealState
 
     companion object {
         val FLASHCARD = "FLASHCARD"

@@ -13,7 +13,7 @@
           </option>
           <option name="pluginClasspaths">
             <array>
-              <option value="$APPLICATION_PLUGINS_DIR$/Kotlin/lib/kotlinx-serialization-ide-plugin.jar" />
+              <option value="$KOTLIN_BUNDLED$/lib/kotlinx-serialization-compiler-plugin.jar" />
             </array>
           </option>
           <option name="multiPlatform" value="true" />

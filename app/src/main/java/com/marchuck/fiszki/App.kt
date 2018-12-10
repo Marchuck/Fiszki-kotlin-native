@@ -3,6 +3,7 @@ package com.marchuck.fiszki
 import android.app.Application
 import android.content.Context
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatDelegate
 import com.marchuck.fiszki.data.AndroidSpecificFlashCardsRepository
 import com.marchuck.fiszki.data.db.FlashcardLessonsDatabase
 import org.kotlin.mpp.mobile.com.marchuck.fiszki.FlashcardsRepository
@@ -37,6 +38,9 @@ class App : Application() {
         super.onCreate()
 
         _context = this
+
+        AppCompatDelegate.setCompatVectorFromResourcesEnabled(true)
+
         ServiceLocator.flashcardsRepository = getFlashCardsRepository()
     }
 
