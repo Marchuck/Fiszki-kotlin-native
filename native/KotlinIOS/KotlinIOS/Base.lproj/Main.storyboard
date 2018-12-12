@@ -18,25 +18,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dyu-zc-FWg">
-                                <rect key="frame" x="145" y="122" width="57" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dyu-zc-FWg">
+                                <rect key="frame" x="16" y="80" width="343" height="30"/>
                                 <state key="normal" title="Lessons"/>
                                 <connections>
                                     <segue destination="lRx-ht-KYD" kind="show" id="hzB-kc-AQk"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qn5-24-LQM">
-                                <rect key="frame" x="119" y="207" width="108" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qn5-24-LQM">
+                                <rect key="frame" x="16" y="126" width="343" height="30"/>
                                 <state key="normal" title="Add new lesson"/>
                                 <connections>
                                     <segue destination="l5W-4e-XlL" kind="show" id="fUD-5q-sf8"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CHz-ts-pIJ">
-                                <rect key="frame" x="145" y="285" width="57" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CHz-ts-pIJ">
+                                <rect key="frame" x="16" y="172" width="343" height="30"/>
                                 <state key="normal" title="Settings"/>
                                 <connections>
                                     <segue destination="2GN-KG-OKU" kind="show" id="NmG-EG-jgG"/>
@@ -44,13 +41,26 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="CHz-ts-pIJ" firstAttribute="top" secondItem="Qn5-24-LQM" secondAttribute="bottom" constant="16" id="4zj-iz-mQw"/>
+                            <constraint firstItem="CHz-ts-pIJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="5ry-NR-sRs"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Qn5-24-LQM" secondAttribute="trailing" constant="16" id="61c-Ah-ErN"/>
+                            <constraint firstItem="CHz-ts-pIJ" firstAttribute="top" secondItem="Qn5-24-LQM" secondAttribute="bottom" constant="16" id="6sn-Ir-1vg"/>
+                            <constraint firstItem="dyu-zc-FWg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="F9F-xG-T7b"/>
+                            <constraint firstItem="dyu-zc-FWg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="UHT-2S-5Ze"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CHz-ts-pIJ" secondAttribute="trailing" constant="16" id="Vuu-U2-v97"/>
+                            <constraint firstItem="Qn5-24-LQM" firstAttribute="top" secondItem="dyu-zc-FWg" secondAttribute="bottom" constant="16" id="Z1r-63-k5y"/>
+                            <constraint firstItem="Qn5-24-LQM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="c95-tH-c21"/>
+                            <constraint firstItem="Qn5-24-LQM" firstAttribute="top" secondItem="dyu-zc-FWg" secondAttribute="bottom" constant="16" id="d57-EA-oJZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dyu-zc-FWg" secondAttribute="trailing" constant="16" id="fHK-6N-avI"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="xdp-qJ-dzX"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="287" y="135"/>
+            <point key="canvasLocation" x="285.60000000000002" y="134.48275862068968"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="cj0-1k-Xb8">
@@ -76,7 +86,7 @@
             </objects>
             <point key="canvasLocation" x="137" y="942"/>
         </scene>
-        <!--Lessons Table View Controller-->
+        <!--Lessons-->
         <scene sceneID="Wc2-WY-eyw">
             <objects>
                 <tableViewController id="lRx-ht-KYD" customClass="LessonsTableViewController" customModule="KotlinIOS" customModuleProvider="target" sceneMemberID="viewController">
@@ -115,6 +125,7 @@
                             <outlet property="delegate" destination="lRx-ht-KYD" id="bgI-V5-hOx"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Lessons" id="hLQ-eF-jS9"/>
                     <connections>
                         <segue destination="HUV-lK-qEf" kind="show" identifier="learningViewController" id="7wH-8z-D8i"/>
                     </connections>
@@ -123,7 +134,7 @@
             </objects>
             <point key="canvasLocation" x="1374" y="-648"/>
         </scene>
-        <!--Learning View Controller-->
+        <!--Lesson title-->
         <scene sceneID="58g-nY-E5T">
             <objects>
                 <viewController id="HUV-lK-qEf" customClass="LearningViewController" customModule="KotlinIOS" customModuleProvider="target" sceneMemberID="viewController">
@@ -146,15 +157,17 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="M4E-IF-8M7"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Lesson title" id="teI-TE-5ya"/>
                     <connections>
                         <outlet property="learningLabel" destination="85R-dY-cXf" id="8sj-ch-xL6"/>
+                        <outlet property="lessonTitleLabel" destination="teI-TE-5ya" id="SyO-Tg-np2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q0P-TM-K7J" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2304.8000000000002" y="-686.80659670164926"/>
         </scene>
-        <!--Create Lesson View Controller-->
+        <!--Create new lesson-->
         <scene sceneID="fsg-R9-BzH">
             <objects>
                 <viewController id="l5W-4e-XlL" customClass="CreateLessonViewController" customModule="KotlinIOS" customModuleProvider="target" sceneMemberID="viewController">
@@ -235,14 +248,6 @@
                                     <action selector="selectTranslationButtonClicked:" destination="l5W-4e-XlL" eventType="touchUpInside" id="1VM-eQ-C6m"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fhZ-CT-JO8">
-                                <rect key="frame" x="280" y="607" width="79" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Done"/>
-                                <connections>
-                                    <action selector="doneButtonClicked:" destination="l5W-4e-XlL" eventType="touchUpInside" id="PQl-5P-fvE"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g6E-8X-wUD">
                                 <rect key="frame" x="16" y="607" width="99" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -267,6 +272,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Vh8-5o-s1L"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Create new lesson" id="ft1-lb-XN3">
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="KS1-cv-9ql">
+                            <connections>
+                                <action selector="onDoneButtonClicked:" destination="l5W-4e-XlL" id="Jr5-4t-BOC"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="addedFlashcardsTableView" destination="jyx-vq-sFV" id="323-vd-bXa"/>
                         <outlet property="lessonNameTextField" destination="Rqo-ia-LHY" id="Sch-Qy-YwX"/>

@@ -5,8 +5,8 @@
       <configuration version="3" platform="JVM 1.6" useProjectSettings="false" isTestModule="true" externalProjectId=":SharedCode">
         <sourceSets>
           <sourceSet>SharedCode_commonMain</sourceSet>
-          <sourceSet>SharedCode_commonTest</sourceSet>
           <sourceSet>SharedCode_androidMain</sourceSet>
+          <sourceSet>SharedCode_commonTest</sourceSet>
         </sourceSets>
         <newMppModelJpsModuleKind>COMPILATION_AND_SOURCE_SET_HOLDER</newMppModelJpsModuleKind>
         <compilerSettings />

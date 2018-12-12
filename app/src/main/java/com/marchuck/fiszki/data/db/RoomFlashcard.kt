@@ -6,6 +6,7 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 import org.kotlin.mpp.mobile.com.marchuck.fiszki.model.FlashCardState
 import org.kotlin.mpp.mobile.com.marchuck.fiszki.model.Flashcard
+import java.util.*
 
 @Entity(tableName = "flashcard")
 data class RoomFlashcard(
@@ -17,7 +18,7 @@ data class RoomFlashcard(
         @ColumnInfo(name = "flashcard_state") var flashcardState: Int)
 
 fun Flashcard.toRoom() = RoomFlashcard(
-        System.currentTimeMillis(),
+        UUID.randomUUID().toString().hashCode().toLong(),
         lesson_id,
         heads,
         tails,

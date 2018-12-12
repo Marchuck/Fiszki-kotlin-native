@@ -159,5 +159,4 @@ class LessonsTableViewController: UITableViewController, LessonsView{
         default: break
         }
     }
-
 }

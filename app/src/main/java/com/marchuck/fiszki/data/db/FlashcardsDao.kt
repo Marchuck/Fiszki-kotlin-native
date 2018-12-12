@@ -6,7 +6,7 @@ import androidx.room.*
 @Dao
 interface FlashcardsDao {
 
-    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    @Insert(onConflict = OnConflictStrategy.FAIL)
     fun insertFlashCards(flashcards: List<RoomFlashcard>)
 
     @Update

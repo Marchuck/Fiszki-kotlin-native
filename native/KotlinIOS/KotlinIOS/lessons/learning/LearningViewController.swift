@@ -15,15 +15,17 @@ class LearningViewController: UIViewController {
     var lesson: Lesson? = nil
     
     @IBOutlet weak var learningLabel: UILabel!
+   
+    @IBOutlet weak var lessonTitleLabel: UINavigationItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+    
         if let lesson = lesson {
+            lessonTitleLabel.title = lesson.name
+            
             learningLabel.text = lesson.name
-
         }
-        // Do any additional setup after loading the view.
     }
     
 

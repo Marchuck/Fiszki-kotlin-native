@@ -11,7 +11,7 @@ import UIKit
 import SharedCode
 
 class CreateLessonViewController: UIViewController, CreateLessonView {
-    
+   
     let presenter = CreateLessonPresenter(createLessonUseCase: CreateLessonUseCase(flashcardsRepository: IOSFlashcardsRepository.INSTANCE))
     
     var flashcards : [Flashcard] = []
@@ -71,8 +71,12 @@ class CreateLessonViewController: UIViewController, CreateLessonView {
         presenter.onAddNewFlashcard()
     }
     
-    @IBAction func doneButtonClicked(_ sender: Any) {
-        showAbsorbingDialog("DONE")
+    @IBAction func onDoneButtonClicked(_ sender: Any) {
+        let lessonName = lessonNameTextField.text ?? ""
+        
+        if presenter.onLessonDoneClicked(lessonName: lessonName) == true {
+            self.navigationController?.popViewController(animated: true)
+        }
     }
     
     override func viewDidLoad() {

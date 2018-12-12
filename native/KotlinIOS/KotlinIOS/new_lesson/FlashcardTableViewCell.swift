@@ -21,8 +21,8 @@ class FlashcardTableViewCell: UITableViewCell {
     @IBOutlet weak var translationTo: UILabel!
     
     @IBAction func removeFlashcardClicked(_ sender: Any) {
-        if(flashcard != nil){
-            listener?(flashcard!)
+        if listener != nil {
+            listener!(flashcard!)
         }
     }
     
@@ -33,7 +33,6 @@ class FlashcardTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
         // Configure the view for the selected state
     }
     

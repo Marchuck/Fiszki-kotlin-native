@@ -229,3 +229,7 @@ DerivedData/
 *.perspectivev3
 !default.perspectivev3
 
+SharedCode/src/commonTest/
+app/src/main/java/com/marchuck/fiszki/settings/
+app/src/test/java/com/marchuck/
+native/KotlinIOS/KotlinIOS/settings/

@@ -5,8 +5,8 @@
       <configuration version="3" platform="Native " useProjectSettings="false" isTestModule="true" externalProjectId=":SharedCode">
         <sourceSets>
           <sourceSet>SharedCode_commonMain</sourceSet>
-          <sourceSet>SharedCode_commonTest</sourceSet>
           <sourceSet>SharedCode_iosMain</sourceSet>
+          <sourceSet>SharedCode_commonTest</sourceSet>
         </sourceSets>
         <newMppModelJpsModuleKind>COMPILATION_AND_SOURCE_SET_HOLDER</newMppModelJpsModuleKind>
         <compilerSettings />
