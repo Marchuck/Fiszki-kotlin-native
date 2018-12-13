@@ -3,7 +3,6 @@
 //  KotlinIOS
 //
 //  Created by Łukasz Marczak on 29.11.2018.
-//  Copyright © 2018 Evgeny Petrenko. All rights reserved.
 //
 
 import Foundation

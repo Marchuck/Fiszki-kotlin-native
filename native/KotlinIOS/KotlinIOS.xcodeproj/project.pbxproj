@@ -10,7 +10,6 @@
 		4741762E215D147E0075153C /* SharedCode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4741762D215D147E0075153C /* SharedCode.framework */; };
 		4741762F215D147E0075153C /* SharedCode.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4741762D215D147E0075153C /* SharedCode.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		47CC68BD215C0386001B3A20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CC68BC215C0386001B3A20 /* AppDelegate.swift */; };
-		47CC68BF215C0386001B3A20 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CC68BE215C0386001B3A20 /* ViewController.swift */; };
 		47CC68C2215C0386001B3A20 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47CC68C0215C0386001B3A20 /* Main.storyboard */; };
 		47CC68C4215C0387001B3A20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47CC68C3215C0387001B3A20 /* Assets.xcassets */; };
 		47CC68C7215C0387001B3A20 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47CC68C5215C0387001B3A20 /* LaunchScreen.storyboard */; };
@@ -41,7 +40,6 @@
 		4741762D215D147E0075153C /* SharedCode.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SharedCode.framework; path = "../../SharedCode/build/xcode-frameworks/SharedCode.framework"; sourceTree = "<group>"; };
 		47CC68B9215C0386001B3A20 /* KotlinIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KotlinIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47CC68BC215C0386001B3A20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		47CC68BE215C0386001B3A20 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		47CC68C1215C0386001B3A20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		47CC68C3215C0387001B3A20 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		47CC68C6215C0387001B3A20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -92,7 +90,6 @@
 				A7DF2B3621B01EBF007B2281 /* new_lesson */,
 				A7DF2B3521B01EB4007B2281 /* lessons */,
 				47CC68BC215C0386001B3A20 /* AppDelegate.swift */,
-				47CC68BE215C0386001B3A20 /* ViewController.swift */,
 				47CC68C0215C0386001B3A20 /* Main.storyboard */,
 				47CC68C3215C0387001B3A20 /* Assets.xcassets */,
 				47CC68C5215C0387001B3A20 /* LaunchScreen.storyboard */,
@@ -241,7 +238,6 @@
 				A7DF2B3921B01EE0007B2281 /* LessonsTableViewController.swift in Sources */,
 				A756070C21BE96D80010CE05 /* LearningViewController.swift in Sources */,
 				A756070921BE92DC0010CE05 /* Dialogs.swift in Sources */,
-				47CC68BF215C0386001B3A20 /* ViewController.swift in Sources */,
 				A756070721BE90AE0010CE05 /* LessonTableViewCell.swift in Sources */,
 				A7DF2B3C21B01F6C007B2281 /* IOSFlashcardsRepository.swift in Sources */,
 				A7E8882521BAE23900ED701F /* CreateLessonViewController.swift in Sources */,
@@ -402,7 +398,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.marchuck.Fishkens;
+				PRODUCT_BUNDLE_IDENTIFIER = com.marchuck.Fishki;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -423,7 +419,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.marchuck.Fishkens;
+				PRODUCT_BUNDLE_IDENTIFIER = com.marchuck.Fishki;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";

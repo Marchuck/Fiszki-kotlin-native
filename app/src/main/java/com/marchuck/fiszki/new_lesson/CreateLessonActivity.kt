@@ -20,6 +20,13 @@ import org.kotlin.mpp.mobile.com.marchuck.fiszki.useCase.CreateLessonUseCase
 
 
 class CreateLessonActivity : AppCompatActivity(), CreateLessonView {
+    override fun hideLoading() {
+
+    }
+
+    override fun showLoading() {
+
+    }
 
     val adapter = FlashcardsAdapter()
 

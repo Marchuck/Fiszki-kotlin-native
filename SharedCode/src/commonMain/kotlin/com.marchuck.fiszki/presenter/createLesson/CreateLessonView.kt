@@ -23,4 +23,8 @@ interface CreateLessonView {
 
     fun onFlashcardInserted(flashcard: Flashcard)
 
+    fun showLoading()
+
+    fun hideLoading()
+
 }

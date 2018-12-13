@@ -5,6 +5,10 @@ data class Flashcard(val lesson_id: Long,
                      val tails: String,
                      val flashCardState: FlashCardState) {
 
+    fun withState(state: FlashCardState): Flashcard {
+        return Flashcard(lesson_id,heads,tails,state)
+    }
+
 }
 
 fun Flashcard.resetProgress(): Flashcard {

@@ -142,25 +142,62 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="85R-dY-cXf">
-                                <rect key="frame" x="16" y="72" width="343" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mnK-e3-7Xd">
+                                <rect key="frame" x="16" y="617" width="100" height="30"/>
+                                <state key="normal" title="I know"/>
+                                <connections>
+                                    <action selector="knowButtonClicked:" destination="HUV-lK-qEf" eventType="touchUpInside" id="ear-JQ-9hx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rmy-4K-aYL">
+                                <rect key="frame" x="149" y="617" width="77" height="30"/>
+                                <state key="normal" title="Don't know"/>
+                                <connections>
+                                    <action selector="dontKnowButtonClicked:" destination="HUV-lK-qEf" eventType="touchUpInside" id="0fp-zh-ozh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UUz-3o-zoR">
+                                <rect key="frame" x="259" y="617" width="100" height="30"/>
+                                <state key="normal" title="Skip"/>
+                                <connections>
+                                    <action selector="skippedButtonClicked:" destination="HUV-lK-qEf" eventType="touchUpInside" id="ATr-hF-fqN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GDb-Vw-lQo">
+                                <rect key="frame" x="164.5" y="318.5" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="headsButtonClicked:" destination="HUV-lK-qEf" eventType="touchUpInside" id="2xo-D6-RIC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zOI-UN-I1S">
+                                <rect key="frame" x="164.5" y="364.5" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="85R-dY-cXf" firstAttribute="top" secondItem="M4E-IF-8M7" secondAttribute="top" constant="8" id="YeI-dL-VtG"/>
-                            <constraint firstItem="85R-dY-cXf" firstAttribute="leading" secondItem="M4E-IF-8M7" secondAttribute="leading" constant="16" id="ZrT-nx-jHz"/>
-                            <constraint firstItem="M4E-IF-8M7" firstAttribute="trailing" secondItem="85R-dY-cXf" secondAttribute="trailing" constant="16" id="xD3-4I-bGC"/>
+                            <constraint firstItem="GDb-Vw-lQo" firstAttribute="centerX" secondItem="igQ-5K-87x" secondAttribute="centerX" id="9bs-ff-3L1"/>
+                            <constraint firstItem="Rmy-4K-aYL" firstAttribute="centerX" secondItem="igQ-5K-87x" secondAttribute="centerX" id="DKJ-Ty-67f"/>
+                            <constraint firstItem="M4E-IF-8M7" firstAttribute="bottom" secondItem="mnK-e3-7Xd" secondAttribute="bottom" constant="20" id="Fui-Hi-dwb"/>
+                            <constraint firstItem="zOI-UN-I1S" firstAttribute="centerX" secondItem="igQ-5K-87x" secondAttribute="centerX" id="NHL-tk-BiB"/>
+                            <constraint firstItem="M4E-IF-8M7" firstAttribute="bottom" secondItem="UUz-3o-zoR" secondAttribute="bottom" constant="20" id="ToU-6Y-SPX"/>
+                            <constraint firstItem="zOI-UN-I1S" firstAttribute="top" secondItem="GDb-Vw-lQo" secondAttribute="bottom" constant="16" id="VSc-Zu-cAg"/>
+                            <constraint firstItem="GDb-Vw-lQo" firstAttribute="centerY" secondItem="igQ-5K-87x" secondAttribute="centerY" id="eTZ-cd-8Td"/>
+                            <constraint firstItem="M4E-IF-8M7" firstAttribute="trailing" secondItem="UUz-3o-zoR" secondAttribute="trailing" constant="16" id="jT5-wA-ntt"/>
+                            <constraint firstItem="mnK-e3-7Xd" firstAttribute="leading" secondItem="M4E-IF-8M7" secondAttribute="leading" constant="16" id="nvL-tB-e3v"/>
+                            <constraint firstItem="Rmy-4K-aYL" firstAttribute="centerX" secondItem="igQ-5K-87x" secondAttribute="centerX" id="zOh-1F-4qs"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="M4E-IF-8M7"/>
                     </view>
                     <navigationItem key="navigationItem" title="Lesson title" id="teI-TE-5ya"/>
                     <connections>
-                        <outlet property="learningLabel" destination="85R-dY-cXf" id="8sj-ch-xL6"/>
+                        <outlet property="dontKnowButton" destination="Rmy-4K-aYL" id="A9w-jS-dgp"/>
+                        <outlet property="headsButton" destination="GDb-Vw-lQo" id="QP5-83-i2j"/>
+                        <outlet property="knowButton" destination="mnK-e3-7Xd" id="heR-1p-e7l"/>
                         <outlet property="lessonTitleLabel" destination="teI-TE-5ya" id="SyO-Tg-np2"/>
+                        <outlet property="skipButton" destination="UUz-3o-zoR" id="KEb-jU-g0z"/>
+                        <outlet property="tailsButton" destination="zOI-UN-I1S" id="17o-nZ-xt5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q0P-TM-K7J" userLabel="First Responder" sceneMemberID="firstResponder"/>

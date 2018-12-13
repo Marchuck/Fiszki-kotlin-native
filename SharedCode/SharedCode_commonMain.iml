@@ -42,5 +42,7 @@
     <orderEntry type="library" name="Gradle: io.ktor:ktor-http:1.0.0-beta-3" level="project" />
     <orderEntry type="library" name="Gradle: io.ktor:ktor-utils:1.0.0-beta-3" level="project" />
     <orderEntry type="library" name="Gradle: io.mockk:mockk-dsl:1.8.3" level="project" />
+    <orderEntry type="library" name="Gradle: org.kodein.di:kodein-di-core-metadata:6.0.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.kodein.di:kodein-di-erased-metadata:6.0.0" level="project" />
   </component>
 </module>

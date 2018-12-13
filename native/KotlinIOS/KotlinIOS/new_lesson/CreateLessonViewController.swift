@@ -3,7 +3,6 @@
 //  KotlinIOS
 //
 //  Created by Łukasz Marczak on 07.12.2018.
-//  Copyright © 2018 Evgeny Petrenko. All rights reserved.
 //
 
 import UIKit

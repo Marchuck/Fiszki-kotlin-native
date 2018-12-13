@@ -6,13 +6,17 @@ import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import com.marchuck.fiszki.App
 import com.marchuck.fiszki.R
+import com.marchuck.fiszki.presenter.learning.LearningPresenter
 import kotlinx.android.synthetic.main.activity_learning.*
 import org.kotlin.mpp.mobile.com.marchuck.fiszki.model.FlashCardState
 import org.kotlin.mpp.mobile.com.marchuck.fiszki.model.Flashcard
 import org.kotlin.mpp.mobile.com.marchuck.fiszki.model.Lesson
+import org.kotlin.mpp.mobile.com.marchuck.fiszki.presenter.learning.FlashcardViewState
+import org.kotlin.mpp.mobile.com.marchuck.fiszki.presenter.learning.LearningView
 
-class LearningActivity : AppCompatActivity() {
+class LearningActivity : AppCompatActivity(), LearningView {
 
     companion object {
 
@@ -27,7 +31,7 @@ class LearningActivity : AppCompatActivity() {
 
     var lesson_id: Long = -1
 
-    val presenter = LearningPresenter()
+    val presenter = LearningPresenter(App.getFlashCardsRepository())
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -49,7 +53,7 @@ class LearningActivity : AppCompatActivity() {
         }
     }
 
-    fun render(state: FlashcardViewState) {
+    override fun render(state: FlashcardViewState) {
         when (state) {
             is FlashcardViewState.BEFORE_REVEAL -> {
                 displayNewFlashcard(state.flashcard)
@@ -97,7 +101,7 @@ class LearningActivity : AppCompatActivity() {
         val skipped = state.skipped
         val learned = state.learned
 
-        val allFlashcardsSize = wrongs.size + skipped.size + learned.size
+        val allFlashcardsSize = state.size
 
         AlertDialog.Builder(this)
                 .setTitle("Your progress")
@@ -119,24 +123,8 @@ class LearningActivity : AppCompatActivity() {
     }
 
     fun revealFlashcard() {
-        render(FlashcardViewState.AFTER_REVEAL)
+        presenter.revealCard()
+
     }
 }
 
-fun Flashcard.withState(state: FlashCardState): Flashcard {
-    return Flashcard(lesson_id, heads, tails, state)
-}
-
-sealed class FlashcardViewState {
-    data class TITLE(val title: String) : FlashcardViewState()
-
-    data class BEFORE_REVEAL(val position: Int, val flashcard: Flashcard) : FlashcardViewState()
-
-    object AFTER_REVEAL : FlashcardViewState()
-
-    data class REACHED_END(val wrong: List<Flashcard>,
-                           val skipped: List<Flashcard>,
-                           val learned: List<Flashcard>) : FlashcardViewState()
-
-    data class FINISHED_LESSON(val rounds: Int) : FlashcardViewState()
-}
