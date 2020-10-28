@@ -1,10 +1,16 @@
 apply plugin: 'kotlin-multiplatform'
+apply plugin: 'kotlinx-serialization'
+
+def coroutines_version = "1.0.0"
+def serialization_version = "0.9.0"
+def ktor_version = "1.0.0-beta-3"
+def kodein_version = "6.0.0"
 
 
 kotlin {
     targets {
-        final def iOSTarget = System.getenv('SDK_NAME')?.startsWith("iphoneos") \
-                              ? presets.iosArm64 : presets.iosX64
+        final def iOSTarget = System.getenv('SDK_NAME')?.startsWith("iphoneos")   \
+                                ? presets.iosArm64 : presets.iosX64
 
         fromPreset(iOSTarget, 'iOS') {
             compilations.main.outputKinds('FRAMEWORK')
@@ -14,15 +20,84 @@ kotlin {
     }
 
     sourceSets {
+
         commonMain.dependencies {
             api 'org.jetbrains.kotlin:kotlin-stdlib-common'
+            implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core-common:$coroutines_version"
+            implementation "org.jetbrains.kotlinx:kotlinx-serialization-runtime-common:$serialization_version"
+            implementation "io.ktor:ktor-client-core:$ktor_version"
+            implementation "io.ktor:ktor-client-json:$ktor_version"
+            implementation "org.kodein.di:kodein-di-core:$kodein_version"
+            implementation "org.kodein.di:kodein-di-erased:$kodein_version"
+            implementation "io.mockk:mockk-common:1.8.3"
+//            def JunitVersion = '4.12'
+//            def KotlinMockitoVersion = '1.5.0'
+//            def SpekVersion = "1.1.5"
+//
+//            testImplementation "junit:junit:${JunitVersion}"
+//            testImplementation "com.nhaarman:mockito-kotlin:${KotlinMockitoVersion}"
+//            testImplementation "org.jetbrains.spek:spek-api:${SpekVersion}"
+//            testImplementation "org.jetbrains.spek:spek-junit-platform-engine:${SpekVersion}"
+//            testImplementation "org.junit.platform:junit-platform-runner:1.0.0"
+
         }
 
+        commonTest.dependencies {
+
+            implementation "org.jetbrains.kotlin:kotlin-test-common"
+            implementation "org.jetbrains.kotlin:kotlin-test-annotations-common"
+            implementation 'org.jetbrains.kotlin:kotlin-test'
+            implementation 'org.jetbrains.kotlin:kotlin-test-junit'
+            implementation "org.kodein.di:kodein-di-core:$kodein_version"
+            implementation "org.kodein.di:kodein-di-erased:$kodein_version"
+            implementation "io.mockk:mockk-common:1.8.3"
+
+//            testImplementation unitTestDependencies.values()
+//            testImplementation spekDependencies.values()
+//            testImplementation kotlinTestDependencies.values()
+
+//            implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+//
+//            testCompile ("org.spekframework.spek2:spek-dsl-jvm:2.0.0-rc.1")  {
+//                exclude group: 'org.jetbrains.kotlin'
+//            }
+//            testRuntimeOnly ("org.spekframework.spek2:spek-runner-junit5:2.0.0-rc.1") {
+//                exclude group: 'org.junit.platform'
+//                exclude group: 'org.jetbrains.kotlin'
+//            }
+//
+//            // spek requires kotlin-reflect, can be omitted if already in the classpath
+//            testRuntimeOnly "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
+
+        }
         androidMain.dependencies {
             api 'org.jetbrains.kotlin:kotlin-stdlib'
+            implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+            implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines_version"
+            implementation "org.jetbrains.kotlinx:kotlinx-serialization-runtime:$serialization_version"
+            implementation "io.ktor:ktor-client-core-jvm:$ktor_version"
+            implementation "io.ktor:ktor-client-json-jvm:$ktor_version"
+            implementation "io.mockk:mockk-common:1.8.3"
         }
-        iosMain.dependencies{
 
+        androidTest.dependencies{
+            implementation "org.jetbrains.kotlin:kotlin-test-common"
+            implementation "org.jetbrains.kotlin:kotlin-test-annotations-common"
+            implementation 'org.jetbrains.kotlin:kotlin-test'
+            implementation 'org.jetbrains.kotlin:kotlin-test-junit'
+            implementation "org.kodein.di:kodein-di-core:$kodein_version"
+            implementation "org.kodein.di:kodein-di-erased:$kodein_version"
+            implementation "io.mockk:mockk-common:1.8.3"
+
+        }
+
+        iosMain.dependencies {
+            implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core-native:$coroutines_version"
+            implementation "org.jetbrains.kotlinx:kotlinx-serialization-runtime-native:$serialization_version"
+            implementation "io.ktor:ktor-client-ios:$ktor_version"
+            implementation "io.ktor:ktor-client-core-ios:$ktor_version"
+            implementation "io.ktor:ktor-client-json-ios:$ktor_version"
+            implementation "io.mockk:mockk-common:1.8.3"
         }
     }
 }

@@ -7,5 +7,10 @@
     <color name="violet">#8a5ae2</color>
     <color name="yellow">#efd74d</color>
 
+    <color name="demo_light_transparent">#16000000</color>
+    <color name="default_shimmer_color">#e3e1e3</color>
+
+
+
 
 </resources>

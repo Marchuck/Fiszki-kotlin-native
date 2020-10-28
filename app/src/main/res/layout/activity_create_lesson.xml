@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".new_lesson.CreateLessonActivity">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/lesson_name_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Lesson title">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/lesson_name_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Lesson title" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/select_translation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lesson_name_layout"
+        android:text="Select translation" />
+
+    <TextView
+        android:id="@+id/selected_translation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lesson_name_layout"
+        android:layout_alignEnd="@+id/lesson_name_layout"
+        android:layout_alignRight="@+id/lesson_name_layout"
+        android:layout_margin="16dp"
+        android:layout_toRightOf="@+id/select_translation"
+        android:gravity="end|center"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18dp"
+        tools:text="AAAAA" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        tools:listitem="@layout/flashcard_added_row"
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/add_translation"
+        android:layout_below="@+id/select_translation" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/add_translation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="16dp"
+        android:layout_marginRight="16dp"
+        android:tint="@android:color/white"
+        app:srcCompat="@drawable/plus" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/done"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="16dp"
+        android:tint="@android:color/white"
+        app:srcCompat="@drawable/done" />
+
+</RelativeLayout>

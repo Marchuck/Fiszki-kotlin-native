@@ -4,7 +4,7 @@ import org.kotlin.mpp.mobile.com.marchuck.fiszki.FlashcardsRepository
 
 class LessonsUseCase(val flashcardsRepository: FlashcardsRepository) {
 
-    fun getLessons() = flashcardsRepository.getFlashCardLessons()
+    fun getLessons() = flashcardsRepository.getLessons()
 
-    fun getLesson(lesson: String) = flashcardsRepository.getLesson(lesson)
+    fun getLesson(lesson_id: Long) = flashcardsRepository.getLesson(lesson_id)
 }

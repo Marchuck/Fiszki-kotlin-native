@@ -1,17 +1,19 @@
 package org.kotlin.mpp.mobile.com.marchuck.fiszki
 
 import org.kotlin.mpp.mobile.com.marchuck.fiszki.model.Flashcard
-import org.kotlin.mpp.mobile.com.marchuck.fiszki.model.KnowledgeProgress
+import org.kotlin.mpp.mobile.com.marchuck.fiszki.model.Lesson
 
 interface FlashcardsRepository {
 
-    fun createLesson(lesson: String, flashcards: List<Flashcard>)
+    fun createLesson(lesson: Lesson, flashcards: List<Flashcard>)
 
-    fun getLesson(lesson: String): List<Flashcard>
+    fun removeLesson(lesson_id: Long)
 
-    fun resetProgress(lesson: String)
+    fun getLesson(lesson_id: Long): Lesson
 
-    fun updateProgress(lesson: String, knowledgeProgress: KnowledgeProgress)
+    fun getLessons(): List<Lesson>
 
-    fun getFlashCardLessons(): List<String>
+    fun getFlashcards(lesson_id: Long): List<Flashcard>
+
+    fun updateFlashcards(lesson_id: Long, flashcards: List<Flashcard>)
 }
